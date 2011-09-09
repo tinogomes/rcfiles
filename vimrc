@@ -31,7 +31,8 @@ set incsearch
 
 " backup and swap settings
 set nobackup
-set directory=~/tmp
+set nowritebackup
+set noswapfile
 
 " make the status line more informative
 set laststatus=2
