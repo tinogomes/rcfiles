@@ -1,0 +1,27 @@
+# configure vim
+@irb_temp_code = nil
+
+def vim(file=nil)
+  open_with("vim", file)
+end
+puts "Vim available."
+
+def mate(file=nil)
+  open_with("mate -w", file)
+end
+puts "mate available."
+
+private
+def open_with(editor, file=nil)
+  file = file || @irb_temp_code || Tempfile.new("irb_tempfile").path+".rb"
+  system("#{editor} #{file}")
+  if(File.exists?(file) && File.size(file)>0)
+    Object.class_eval(File.read(file))
+    @irb_temp_code = file
+    "File loaded from #{editor}."
+  else
+    "No file loaded."
+  end
+rescue => e
+  puts "Error on #{editor}: #{e}"
+end

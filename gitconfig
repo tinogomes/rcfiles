@@ -1,0 +1,54 @@
+[alias]
+  br = branch
+  bra = branch -a
+  brr = branch -r
+  ci = commit
+  cim = commit -m
+  co = checkout
+  cob = checkout -b
+  cp = cherry-pick
+  df = diff --word-diff
+  one = log --pretty=oneline --abbrev-commit -20 --decorate
+  rb = rebase
+  rbc = rebase --continue
+  rbs = rebase --skip
+  rp = remote prune
+  ru = remote update
+  st = status
+  sts = status -sb
+  uncommit = reset --soft HEAD^
+  who = shortlog -s
+
+[color]
+  branch = auto
+  diff = auto
+  grep = auto
+  status = auto
+  ui = auto
+
+[core]
+  editor=mate -wl1
+  excludesfile = .DS_Store .swp .swo
+  attributesfile = ~/.gitattributes-global
+
+[github]
+  user = tinogomes
+
+[help]
+  autocorrect = 1
+	format = web
+
+[instaweb]
+  httpd = webrick
+
+[log]
+  date = relative
+  decorate = short
+
+[merge "bundlelock"]
+  name = bundle lock
+  driver = "rm -f Gemfile.lock; bundle check"
+
+[user]
+  email = tinorj@gmail.com
+	name = tinogomes
