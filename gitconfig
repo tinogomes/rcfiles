@@ -27,7 +27,7 @@
   ui = auto
 
 [core]
-  editor=mate -wl1
+  editor=$EDITOR
   excludesfile = .DS_Store .swp .swo
   attributesfile = ~/.gitattributes-global
 
@@ -51,4 +51,4 @@
 
 [user]
   email = tinorj@gmail.com
-	name = tinogomes
+  name = tinogomes

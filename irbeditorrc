@@ -11,6 +11,10 @@ def mate(file=nil)
 end
 puts "mate available."
 
+def gedit(file=nil)
+  open_with("gedit", file)
+end
+
 private
 def open_with(editor, file=nil)
   file = file || @irb_temp_code || Tempfile.new("irb_tempfile").path+".rb"

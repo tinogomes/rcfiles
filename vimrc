@@ -1,13 +1,51 @@
+" enable filetype specifics
+filetype on
+filetype plugin on
+filetype indent on
+
+" syntax highlight
 syntax on
 
-set nu     				" mostra o numero da linha
-set numberwidth=4                       " If we have over 9999 lines, ohh, boo-hoo
-set ai     				" AutoIndent: identacao automatica
-set ruler  				" mostra a posicao do cursor, regua
-set sm     				" ShowMatch: mostra o par do parenteses/chaves recem fechado
+" encoding it UTF-8 no matter what the term says
+set encoding=utf-8
 
-au BufRead,BufNewFile *.rb,*.rhtml,*.erb set tabstop=2     " ruby standard 2 spaces
-au BufRead,BufNewFile *.rb,*.rhtml,*.erb set shiftwidth=2  " ruby standard 2 spaces
-au BufRead,BufNewFile *.rb,*.rhtml,*.erb set softtabstop=2 " ruby standard 2 spaces
+set nocompatible
+set wrap
+set fileformats=unix,mac,dos
+set cursorline
+set autoread " automatically reloads file if changed outside
+set ruler
 
+" tab/indentation configuration
+set softtabstop=2
+set shiftwidth=2
+set expandtab
+set smarttab
+set autoindent
+set smartindent
+
+" search pattern highlight/incremental
+set showmatch
+set hlsearch
+set incsearch
+
+" backup and swap settings
+set nobackup
+set directory=~/tmp
+
+" make the status line more informative
+set laststatus=2
+set statusline=%<buf:[%n]\ %f\ %h%m%r " buffer, filename, flags
+set statusline+=\ \ [
+set statusline+=%{strlen(&ft)?&ft:'none'} " filetype
+set statusline+=]\ "
+set statusline+=%=
+set statusline+=\ [%3.(%c%)\ %-7.(%l/%L%)]\ %P
+
+" a few useful shortcuts
+command! Rehash source ~/.vimrc
+
+" python specifics
+" autocmd FileType python set softtabstop=4
+" autocmd FileType python set shiftwidth=4
 
