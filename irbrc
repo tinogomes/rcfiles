@@ -1,11 +1,24 @@
+require "rubygems"
+
+
+if defined?(Rails) && Rails.env
+  if defined?(ActiveRecord)
+    require 'logger'
+    # Replace ActiveRecord logger
+    ActiveRecord::Base.logger = Logger.new(STDOUT)
+
+    # Set up ActiveRecord shortcut
+    ActiveRecord::Base.instance_eval { alias :[] :find }
+  end
+
+  require "pry"
+  Pry.start
+  exit
+end
+
 require "irb/completion"         # activate default completion
 require "irb/ext/save-history"   # activate default history
 require "tempfile"               # used for Vim integration
-
-IRB.conf[:SAVE_HISTORY] = 10000
-IRB.conf[:HISTORY_FILE] = "#{ENV["HOME"]}/.irb_history"
-IRB.conf[:AUTO_INDENT]  = true
-IRB.conf[:PROMPT_MODE]  = :SIMPLE
 
 gems = {
   :rubygems => proc { true },
@@ -39,6 +52,11 @@ end
 
 load "~/.irbeditorrc"
 
+IRB.conf[:SAVE_HISTORY] = 10000
+IRB.conf[:HISTORY_FILE] = "#{ENV["HOME"]}/.irb_history"
+IRB.conf[:AUTO_INDENT]  = true
+IRB.conf[:PROMPT_MODE]  = :SIMPLE
+
 IRB.conf[:IRB_RC] = Proc.new do
   if defined?(ActiveRecord)
     require 'logger'
@@ -49,3 +67,4 @@ IRB.conf[:IRB_RC] = Proc.new do
     ActiveRecord::Base.instance_eval { alias :[] :find }
   end
 end
+
