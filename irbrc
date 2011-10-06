@@ -1,7 +1,5 @@
-require "rubygems"
-
-
-if defined?(Rails) && Rails.env
+# Add `gem "pry"` into your Gemfile to load Pry console
+if defined?(Pry)
   if defined?(ActiveRecord)
     require 'logger'
     # Replace ActiveRecord logger
@@ -11,7 +9,6 @@ if defined?(Rails) && Rails.env
     ActiveRecord::Base.instance_eval { alias :[] :find }
   end
 
-  require "pry"
   Pry.start
   exit
 end
