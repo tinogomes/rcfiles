@@ -28,7 +28,7 @@
 
 [core]
   editor=$EDITOR
-  excludesfile = .DS_Store .swp .swo
+	excludesfile = /Users/celestino/.gitignore_global
   attributesfile = ~/.gitattributes-global
 
 [github]
@@ -36,7 +36,7 @@
 
 [help]
   autocorrect = 1
-	format = web
+  format = web
 
 [instaweb]
   httpd = webrick
@@ -50,5 +50,12 @@
   driver = "rm -f Gemfile.lock; bundle check"
 
 [user]
-  email = tinorj@gmail.com
-  name = tinogomes
+	email = tinorj@gmail.com
+	name = tinogomes
+
+[difftool "sourcetree"]
+	cmd = opendiff \"$LOCAL\" \"$REMOTE\"
+	path = 
+[mergetool "sourcetree"]
+	cmd = /Applications/SourceTree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
+	trustExitCode = true
