@@ -22,14 +22,14 @@
 
 [color]
   branch = auto
-  diff = auto
-  grep = auto
+  diff   = auto
+  grep   = auto
   status = auto
-  ui = auto
+  ui     = auto
 
 [core]
-  editor=$EDITOR
-	excludesfile = /Users/celestino/.gitignore_global
+  editor         = $EDITOR
+  excludesfile   = /Users/celestino/.gitignore_global
   attributesfile = ~/.gitattributes-global
 
 [github]
@@ -43,20 +43,16 @@
   httpd = webrick
 
 [log]
-  date = relative
+  date     = relative
   decorate = short
 
 [merge "bundlelock"]
-  name = bundle lock
+  name   = bundle lock
   driver = "rm -f Gemfile.lock; bundle check"
 
 [user]
-	email = tinorj@gmail.com
-	name = tinogomes
+  email = tinorj@gmail.com
+  name = tinogomes
 
-[difftool "sourcetree"]
-	cmd = opendiff \"$LOCAL\" \"$REMOTE\"
-	path =
-[mergetool "sourcetree"]
-	cmd = /Applications/SourceTree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
-	trustExitCode = true
+[push]
+  default = current
