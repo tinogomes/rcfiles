@@ -41,5 +41,13 @@ alias bundles='cd ~/Library/Application\ Support/TextMate/Bundles'
 alias deploy="git push; cap deploy"
 alias simple-http-server="python -m SimpleHTTPServer"
 
+alias bundles='cd ~/Library/Application\ Support/TextMate/Bundles'
+
+# Disable nocorrect for...
 alias bundle="nocorrect bundle"
-alias rvm="nocorrect rvm"
+alias git="nocorrect git"
+alias gitx="nocorrect gitx"
+alias heroku='nocorrect heroku'
+alias rvm='nocorrect rvm'
+
+PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
