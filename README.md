@@ -2,10 +2,6 @@
 
 ## Requirements
 
-Z Shell - http://www.zsh.org/
-
-    $ brew install zsh # On OSX
-
 Oh my zsh - https://github.com/tinogomes/oh-my-zsh
 
     $ git clone git://github.com/tinogomes/oh-my-zsh.git
