@@ -9,6 +9,7 @@ syntax on
 " encoding it UTF-8 no matter what the term says
 set encoding=utf-8
 
+set number " show lines
 set nocompatible
 set wrap
 set fileformats=unix,mac,dos
