@@ -13,6 +13,4 @@ Oh my zsh - https://github.com/tinogomes/oh-my-zsh
 
 ## Local settings
 
-Write into ~/.zshrc_local file
-
-    $ touch ~/.zshrc_local
+Write into ```~/.zshrc_local``` file.
