@@ -8,6 +8,10 @@ ln -s $HOME/.rcfiles/pryrc $HOME/.pryrc
 ln -s $HOME/.rcfiles/rdebugrc $HOME/.rdebugrc
 ln -s $HOME/.rcfiles/vimrc $HOME/.vimrc
 
+echo "Write here your local settings" >> $HOME/.zshrc_local
+
+mv $HOME/.zshrc $HOME/.zshrc_original
+
 case $1 in
 	ubuntu|linux) ln -s $HOME/.rcfiles/zshrc_ubuntu $HOME/.zshrc;;
 	*) ln -s $HOME/.rcfiles/zshrc_osx $HOME/.zshrc;;
