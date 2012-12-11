@@ -4,16 +4,15 @@
 
 Oh my zsh - https://github.com/tinogomes/oh-my-zsh
 
-    $ git clone git://github.com/tinogomes/oh-my-zsh.git
+    $ git clone git://github.com/tinogomes/oh-my-zsh.git .oh-my-zsh
 
 ## How to install
 
     $ cd $HOME
     $ git clone git://github.com/tinogomes/rcfiles.git .rcfiles
-    $ .rcfiles/install
 
 ## Local settings
 
-Create .zshrc\_local file at your ```$HOME```
+Write into ~/.zshrc_local file
 
     $ touch ~/.zshrc_local
