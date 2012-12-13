@@ -5,9 +5,9 @@ plugins=(brew bundler cap gem git github rails3 ruby rvm)
 # Load local settings
 [[ -s ~/.zshrc_local ]] && source ~/.zshrc_local
 
-source ~/.rcfiles/zshrc_shared
-
 export EDITOR=vim
+
+source ~/.rcfiles/zshrc_shared
 
 alias pbcopy='xclip -selection clipboard'
 alias pbpaste='xclip -selection clipboard -o'
