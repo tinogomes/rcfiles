@@ -29,6 +29,8 @@ DISABLE_AUTO_UPDATE="true"
 source $ZSH/oh-my-zsh.sh
 
 # Customize to your needs...
+
+# Some environment variables
 export PATH=./bin:~/bin:$PATH:$HOME/.rvm/bin
 export PROJECTS_PATH="$HOME/Projects"
 export CDPATH=.:~:$PROJECTS_PATH
@@ -46,7 +48,6 @@ alias heroku='nocorrect heroku'
 alias rvm='nocorrect rvm'
 
 # Other aliases...
-alias deploy="git push; cap deploy"
 alias p='cd $PROJECTS_PATH'
 alias simple-http-server="python -m SimpleHTTPServer"
 
