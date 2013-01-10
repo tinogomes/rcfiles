@@ -50,9 +50,3 @@ alias rvm='nocorrect rvm'
 # Other aliases...
 alias p='cd $PROJECTS_PATH'
 alias simple-http-server="python -m SimpleHTTPServer"
-
-# Functions
-encoding_file = function() {
-	sed '1i#encoding: UTF-8' $1 > /tmp/new_file.tmp
-	mv /tmp/new_file.tmp $1
-}
