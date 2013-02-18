@@ -7,6 +7,7 @@ ln -s $HOME/.rcfiles/irbrc $HOME/.irbrc
 ln -s $HOME/.rcfiles/pryrc $HOME/.pryrc
 ln -s $HOME/.rcfiles/rdebugrc $HOME/.rdebugrc
 ln -s $HOME/.rcfiles/vimrc $HOME/.vimrc
+ln -s $HOME/.rcfiles/slate $HOME/.slate
 
 echo "Write here your local settings" >> $HOME/.zshrc_local
 
