@@ -7,7 +7,8 @@
   co = checkout
   cob = checkout -b
   cp = cherry-pick
-  df = diff --word-diff
+  diffs = diff --staged
+  diffw = diff --word-diff
   llog = log --pretty='format:%Cgreen%h %Cred%ar %Creset-- %s (%an)' --max-count=20
   one = log --pretty=oneline --abbrev-commit -20 --decorate
   rb = rebase
