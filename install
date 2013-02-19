@@ -1,3 +1,5 @@
+#!/usr/bin/env bash
+
 ln -s $HOME/.rcfiles/gemrc $HOME/.gemrc
 ln -s $HOME/.rcfiles/gitattributes-global $HOME/.gitattributes
 ln -s $HOME/.rcfiles/gitconfig $HOME/.gitconfig
@@ -9,6 +11,7 @@ ln -s $HOME/.rcfiles/rdebugrc $HOME/.rdebugrc
 ln -s $HOME/.rcfiles/vimrc $HOME/.vimrc
 ln -s $HOME/.rcfiles/slate $HOME/.slate
 
+echo "Write on $HOME/.zshrc_local file your local settings"
 echo "Write here your local settings" >> $HOME/.zshrc_local
 
 mv $HOME/.zshrc $HOME/.zshrc_original

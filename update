@@ -1,0 +1,15 @@
+#!/usr/bin/env bash
+
+git checkout .
+git pull
+
+[ ! -h $HOME/.gemrc ] && ln -s $HOME/.rcfiles/gemrc $HOME/.gemrc
+[ ! -h $HOME/.gitattributes ] && ln -s $HOME/.rcfiles/gitattributes-global $HOME/.gitattributes
+[ ! -h $HOME/.gitconfig ] && ln -s $HOME/.rcfiles/gitconfig $HOME/.gitconfig
+[ ! -h $HOME/.gitignore_global ] && ln -s $HOME/.rcfiles/gitignore_global $HOME/.gitignore_global
+[ ! -h $HOME/.irbeditorrc ] && ln -s $HOME/.rcfiles/irbeditorrc $HOME/.irbeditorrc
+[ ! -h $HOME/.irbrc ] && ln -s $HOME/.rcfiles/irbrc $HOME/.irbrc
+[ ! -h $HOME/.pryrc ] && ln -s $HOME/.rcfiles/pryrc $HOME/.pryrc
+[ ! -h $HOME/.rdebugrc ] && ln -s $HOME/.rcfiles/rdebugrc $HOME/.rdebugrc
+[ ! -h $HOME/.vimrc ] && ln -s $HOME/.rcfiles/vimrc $HOME/.vimrc
+[ ! -h $HOME/.slate ] && ln -s $HOME/.rcfiles/slate $HOME/.slate
