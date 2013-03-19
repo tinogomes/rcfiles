@@ -14,6 +14,7 @@ puts "mate available."
 def gedit(file=nil)
   open_with("gedit", file)
 end
+puts "gedit available."
 
 private
 def open_with(editor, file=nil)
