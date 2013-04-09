@@ -10,6 +10,7 @@ syntax on
 set encoding=utf-8
 
 set number " show lines
+set numberwidth=5
 set nocompatible
 set wrap
 set fileformats=unix,mac,dos
