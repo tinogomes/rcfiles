@@ -49,6 +49,6 @@ set statusline+=\ [%3.(%c%)\ %-7.(%l/%L%)]\ %P
 command! Rehash source ~/.vimrc
 
 " python specifics
-" autocmd FileType python set softtabstop=4
+autocmd FileType ruby set softtabstop=2
 " autocmd FileType python set shiftwidth=4
 
