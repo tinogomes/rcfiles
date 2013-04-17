@@ -14,27 +14,10 @@ alias ssy screenSizeY
 # Position aliases
 alias centered ${sox}+${ssx}/8;${soy}+${ssy}/8 ${ssx}/8*6;${ssy}/8*6
 alias fullscreen ${sox};${soy} ${ssx};${ssy}
-alias leftHalf ${sox};${soy} ${ssx}/3;${ssy}
-alias onLeft ${sox};${soy} ${ssx}/1.3;${ssy}
+alias onLeft ${sox};${soy} ${ssx}/2;${ssy}
 alias bottomHalf ${sox};${soy}+${ssy}/2 ${ssx};${ssy}/2
-alias topHalf ${sox};${soy} ${ssx};2*${ssy}/3
-alias onRight ${sox}+${ssx}-${ssx}/3;${soy} ${ssx}/3;${ssy}
-# alias rightHalf ${sox}+${ssx}/2;${soy} ${ssx}/2;${ssy}
-# alias topLeftQuarter ${sox};${soy} ${ssx}/2;${ssy}/2
-# alias topRightQuarter ${sox}+${ssx}/2;${soy} ${ssx}/2;${ssy}/2
-# alias bottomLeftQuarter ${sox};${soy}+${ssy}/2 ${ssx}/2;${ssy}/2
-# alias bottomRightQuarter ${sox}+${ssx}/2;${soy}+${ssy}/2 ${ssx}/2;${ssy}/2
-
-# Application aliases
-alias adiumContacts3 move ${sox};${soy} ${ssx}/5;${ssy}/3*2 0
-alias adiumChat3 move ${sox}+${ssx}/5;${soy}+${ssy}/3 ${ssx}/5*4;${ssy}/3 0
-
-# 1 monitor layout
-# layout oneScreen 'Adium':TITLE_ORDER='Contacts' move ${sox};${soy} ${ssx}/9;${ssy}
-# layout oneScreen 'Spotify' move ${fullscreen}
-# layout oneScreen 'Google Chrome' move ${fullscreen}
-# layout threeScreen 'MacVim' move ${rightHalf}
-# layout threeScreen 'iTerm' move ${fullscreen}
+alias topHalf ${sox};${soy} ${ssx};2*${ssy}/2
+alias onRight ${sox}+${ssx}-${ssx}/2;${soy} ${ssx}/2;${ssy}
 
 # Bindings
 bind c:cmd;ctrl move ${centered}
@@ -43,18 +26,14 @@ bind h:cmd;ctrl move ${onLeft}
 bind j:cmd;ctrl move ${bottomHalf}
 bind k:cmd;ctrl move ${topHalf}
 bind l:cmd;ctrl move ${onRight}
-# bind u:cmd;ctrl move ${topLeftQuarter}
-# bind i:cmd;ctrl move ${topRightQuarter}
-# bind n:cmd;ctrl move ${bottomLeftQuarter}
-# bind m:cmd;ctrl move ${bottomRightQuarter}
 
 bind ;:cmd;ctrl throw previous
-# bind /:cmd;ctrl hint ASDFJKLGH
 
-bind right:cmd;ctrl resize +10% +0
-bind left:cmd;ctrl  resize -10% +0
-bind up:cmd;ctrl    resize +0 -10%
-bind down:cmd;ctrl  resize +0 +10%
+ruby: warning: -K is specified; it is for 1.8 compatibility and may cause odd behavior
+bind right:ctrl;shift resize +10% +0
+bind left:ctrl;shift  resize -10% +0
+bind up:ctrl;shift    resize +0 -10%
+bind down:ctrl;shift  resize +0 +10%
 
 bind right:ctrl;alt nudge +10% +0
 bind left:ctrl;alt  nudge -10% +0
