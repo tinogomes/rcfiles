@@ -37,6 +37,8 @@ export PATH=.:./bin:~/bin:$PATH:$HOME/.rvm/bin
 export PROJECTS_PATH="$HOME/Projects"
 export CDPATH=.:~:$PROJECTS_PATH
 
+export RUBY_OPT=-E utf-8
+
 # Always create $PROJECTS_PATH directory at HOME
 if [[ ! -d "$PROJECTS_PATH" ]]; then
 	mkdir "$PROJECTS_PATH"
