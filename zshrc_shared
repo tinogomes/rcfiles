@@ -38,6 +38,8 @@ export PROJECTS_PATH="$HOME/Projects"
 export CDPATH=.:~:$PROJECTS_PATH
 
 export RUBY_OPT='-E utf-8'
+export LC_ALL="en_US.UTF-8"
+export LANG="en_US.UTF-8"
 
 # Always create $PROJECTS_PATH directory at HOME
 if [[ ! -d "$PROJECTS_PATH" ]]; then
