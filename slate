@@ -29,13 +29,12 @@ bind l:cmd;ctrl move ${onRight}
 
 bind ;:cmd;ctrl throw previous
 
-ruby: warning: -K is specified; it is for 1.8 compatibility and may cause odd behavior
-bind right:ctrl;shift resize +10% +0
-bind left:ctrl;shift  resize -10% +0
-bind up:ctrl;shift    resize +0 -10%
-bind down:ctrl;shift  resize +0 +10%
+bind l:ctrl;shift resize +10% +0
+bind h:ctrl;shift resize -10% +0
+bind j:ctrl;shift resize +0 -10%
+bind k:ctrl;shift resize +0 +10%
 
-bind right:ctrl;alt nudge +10% +0
-bind left:ctrl;alt  nudge -10% +0
-bind up:ctrl;alt    nudge +0 -10%
-bind down:ctrl;alt  nudge +0 +10%
+bind l:ctrl;alt nudge +10% +0
+bind h:ctrl;alt nudge -10% +0
+bind j:ctrl;alt nudge +0 -10%
+bind k:ctrl;alt nudge +0 +10%
