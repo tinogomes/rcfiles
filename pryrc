@@ -25,6 +25,10 @@ rescue LoadError => err
    warn "=> Unable to load awesome_print"
 end
 
-Pry.commands.alias_command 'c', 'continue'
-Pry.commands.alias_command 's', 'step'
-Pry.commands.alias_command 'n', 'next'
+begin
+  Pry.commands.alias_command 'c', 'continue'
+  Pry.commands.alias_command 's', 'step'
+  Pry.commands.alias_command 'n', 'next'
+rescue
+  warn '=> pry-debugger not load'
+end
