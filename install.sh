@@ -6,11 +6,11 @@ hash git >/dev/null || {
 cd $HOME
 
 if [ ! -d $HOME/.oh-my-zsh ]; then
-	git clone git://github.com/tinogomes/oh-my-zsh.git .oh-my-zsh
+	git clone git@github.com:tinogomes/oh-my-zsh.git .oh-my-zsh
 fi
 
 if [ ! -d $HOME/rcfiles ]; then
-	git clone git@github.com:tinogomes/rcfiles.git
+	git clone git@github.com:tinogomes/rcfiles.git .rcfiles
 fi
 
 ln -s $HOME/.rcfiles/gemrc $HOME/.gemrc
