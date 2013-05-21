@@ -5,11 +5,11 @@ hash git >/dev/null || {
 
 cd $HOME
 
-if [ -d $HOME/.oh-my-zsh ]; then
+if [ ! -d $HOME/.oh-my-zsh ]; then
 	git clone git://github.com/tinogomes/oh-my-zsh.git .oh-my-zsh
 fi
 
-if [ -d $HOME/rcfiles ]; then
+if [ ! -d $HOME/rcfiles ]; then
 	git clone git@github.com:tinogomes/rcfiles.git
 fi
 
