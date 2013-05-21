@@ -7,7 +7,7 @@
 
 ## How to install
 
-    $ curl -L https://github.com/tinogomes/rcfiles/install.sh | sh
+    $ curl -L https://raw.github.com/tinogomes/rcfiles/master/install.sh | sh
 
 ## Local settings
 
