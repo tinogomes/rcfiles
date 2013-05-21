@@ -2,15 +2,15 @@
 
 ## Requirements
 
-Oh my zsh - https://github.com/tinogomes/oh-my-zsh
-
-    $ git clone git://github.com/tinogomes/oh-my-zsh.git .oh-my-zsh
+* Z Shell
+* Oh my zsh - https://github.com/tinogomes/oh-my-zsh
 
 ## How to install
 
-    $ cd $HOME
-    $ git clone git://github.com/tinogomes/rcfiles.git .rcfiles
+    $ curl -L https://github.com/robbyrussell/oh-my-zsh/raw/master/tools/install.sh | sh
 
 ## Local settings
 
 Write into ```~/.zshrc_local``` file.
+
+Be happy!
