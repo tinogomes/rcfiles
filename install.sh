@@ -1,16 +1,16 @@
 hash git >/dev/null || {
   echo "git not installed"
-  exit
+  exit 1
 }
 
 cd $HOME
 
 if [ ! -d $HOME/.oh-my-zsh ]; then
-	git clone git@github.com:tinogomes/oh-my-zsh.git .oh-my-zsh
+	git clone git@github.com:tinogomes/oh-my-zsh.git .oh-my-zsh || exit 1
 fi
 
 if [ ! -d $HOME/rcfiles ]; then
-	git clone git@github.com:tinogomes/rcfiles.git .rcfiles
+	git clone git@github.com:tinogomes/rcfiles.git .rcfiles || exit 1
 fi
 
 ln -s $HOME/.rcfiles/gemrc $HOME/.gemrc
