@@ -45,7 +45,7 @@ case $1 in
 		echo "Note: You must turn on the Accessibility API by checking"
 		echo "System Preferences > Universal Access > Enable access for assistive devices"
 		
-		cd /Application && curl http://www.ninjamonkeysoftware.com/slate/versions/slate-latest.tar.gz | tar -xz
+		cd /Applications && curl http://www.ninjamonkeysoftware.com/slate/versions/slate-latest.tar.gz | tar -xz && open Slate.app
 		;;
 esac
 
