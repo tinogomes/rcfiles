@@ -30,6 +30,7 @@ ln -s $HOME/.rcfiles/vimrc $HOME/.vimrc
 
 
 if [ -f $HOME/.zshrc ]; then
+	echo "Backing up your $HOME/.zshrc file into $HOME/.zshrc_original"
 	mv $HOME/.zshrc $HOME/.zshrc_original
 fi
 
