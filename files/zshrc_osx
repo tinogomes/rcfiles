@@ -7,4 +7,4 @@ plugins=(brew bundler cap gem git github osx rails3 ruby rvm textmate ralio)
 
 export EDITOR='mate -w'
 
-source ~/.rcfiles/zshrc_shared
+source ~/.zshrc_shared

@@ -18,15 +18,16 @@ if [ ! -d $HOME/.rcfiles ]; then
 	exit 1
 fi
 
-ln -s $HOME/.rcfiles/gemrc $HOME/.gemrc
-ln -s $HOME/.rcfiles/gitattributes-global $HOME/.gitattributes
-ln -s $HOME/.rcfiles/gitconfig $HOME/.gitconfig
-ln -s $HOME/.rcfiles/gitignore_global $HOME/.gitignore_global
-ln -s $HOME/.rcfiles/irbeditorrc $HOME/.irbeditorrc
-ln -s $HOME/.rcfiles/irbrc $HOME/.irbrc
-ln -s $HOME/.rcfiles/pryrc $HOME/.pryrc
-ln -s $HOME/.rcfiles/rdebugrc $HOME/.rdebugrc
-ln -s $HOME/.rcfiles/vimrc $HOME/.vimrc
+ln -s $HOME/.rcfiles/files/gemrc $HOME/.gemrc
+ln -s $HOME/.rcfiles/files/gitattributes-global $HOME/.gitattributes
+ln -s $HOME/.rcfiles/files/gitconfig $HOME/.gitconfig
+ln -s $HOME/.rcfiles/files/gitignore_global $HOME/.gitignore_global
+ln -s $HOME/.rcfiles/files/irbeditorrc $HOME/.irbeditorrc
+ln -s $HOME/.rcfiles/files/irbrc $HOME/.irbrc
+ln -s $HOME/.rcfiles/files/pryrc $HOME/.pryrc
+ln -s $HOME/.rcfiles/files/rdebugrc $HOME/.rdebugrc
+ln -s $HOME/.rcfiles/files/vimrc $HOME/.vimrc
+ln -s $HOME/.rcfiles/files/zshrc_shared $HOME/.zshrc_shared
 
 
 if [ -f $HOME/.zshrc ]; then
@@ -35,11 +36,11 @@ if [ -f $HOME/.zshrc ]; then
 fi
 
 case $1 in
-	ubuntu|linux) ln -s $HOME/.rcfiles/zshrc_ubuntu $HOME/.zshrc;;
+	ubuntu|linux) ln -s $HOME/.rcfiles/files/zshrc_ubuntu $HOME/.zshrc;;
 	*) 
-		ln -s $HOME/.rcfiles/zshrc_osx $HOME/.zshrc
+		ln -s $HOME/.rcfiles/files/zshrc_osx $HOME/.zshrc
 		
-		ln -s $HOME/.rcfiles/slate $HOME/.slate
+		ln -s $HOME/.rcfiles/files/slate $HOME/.slate
 		echo "Installing https://github.com/jigish/slate"
 		echo "------------------------------------------"
 		echo "Note: You must turn on the Accessibility API by checking"

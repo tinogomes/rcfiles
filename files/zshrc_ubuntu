@@ -7,7 +7,7 @@ plugins=(brew bundler cap gem git github rails3 ruby rvm)
 
 export EDITOR=vim
 
-source ~/.rcfiles/zshrc_shared
+source ~/.zshrc_shared
 
 alias pbcopy='xclip -selection clipboard'
 alias pbpaste='xclip -selection clipboard -o'
