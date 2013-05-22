@@ -50,4 +50,4 @@ case $1 in
 esac
 
 echo "Write on $HOME/.zshrc_local file your local settings"
-echo "Write here your local settings" >> $HOME/.zshrc_local
+echo "# Write here your local settings" >> $HOME/.zshrc_local
