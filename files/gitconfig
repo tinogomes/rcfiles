@@ -4,6 +4,7 @@
   brr = branch -r
   ci = commit
   cim = commit -m
+  ciam = commit -am
   co = checkout
   cob = checkout -b
   cp = cherry-pick
