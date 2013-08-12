@@ -12,6 +12,7 @@
   diffw = diff --word-diff
   llog = log --pretty='format:%Cgreen%h %Cred%ar %Creset-- %s (%an)' --max-count=20
   one = log --pretty=oneline --abbrev-commit -20 --decorate
+  oneg = log --oneline --graph
   rb = rebase
   rbc = rebase --continue
   rbs = rebase --skip
