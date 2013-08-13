@@ -1,9 +1,14 @@
 hash git >/dev/null || {
-  echo "git not installed"
+  echo "Git not installed. $ brew install git"
   exit 1
 }
 
 cd $HOME
+
+if [ ! -f /usr/local/bin/zsh ]; then
+  echo "Z Shell required. $ brew install zsh"
+  exit 1
+fi
 
 if [ ! -d $HOME/.oh-my-zsh ]; then
 	git clone git@github.com:tinogomes/oh-my-zsh.git .oh-my-zsh || exit 1
@@ -17,6 +22,8 @@ if [ ! -d $HOME/.rcfiles ]; then
 	echo "You don't clone tinogomes's rcfiles repo"
 	exit 1
 fi
+
+chsh -s /usr/local/bin/zsh
 
 ln -s $HOME/.rcfiles/files/gemrc $HOME/.gemrc
 ln -s $HOME/.rcfiles/files/gitattributes-global $HOME/.gitattributes
