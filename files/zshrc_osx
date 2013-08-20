@@ -5,6 +5,8 @@ plugins=(brew bundler cap gem git github osx rails3 ruby rvm textmate ralio)
 # Load local settings
 [[ -s ~/.zshrc_local ]] && source ~/.zshrc_local
 
-export EDITOR='mate -w'
+if [[ -z "$EDITOR" ]]; then
+	export EDITOR='mate -w'
+fi
 
 source ~/.zshrc_shared
