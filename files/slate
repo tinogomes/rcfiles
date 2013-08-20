@@ -22,19 +22,19 @@ alias onRight ${sox}+${ssx}-${ssx}/2;${soy} ${ssx}/2;${ssy}
 # Bindings
 bind c:cmd;ctrl move ${centered}
 bind m:cmd;ctrl move ${fullscreen}
-bind h:cmd;ctrl move ${onLeft}
-bind j:cmd;ctrl move ${bottomHalf}
-bind k:cmd;ctrl move ${topHalf}
-bind l:cmd;ctrl move ${onRight}
+# bind h:cmd;ctrl move ${onLeft}
+# bind j:cmd;ctrl move ${bottomHalf}
+# bind k:cmd;ctrl move ${topHalf}
+# bind l:cmd;ctrl move ${onRight}
 
 bind ;:cmd;ctrl throw previous
 
-bind l:ctrl;shift resize +10% +0
-bind h:ctrl;shift resize -10% +0
-bind j:ctrl;shift resize +0 -10%
-bind k:ctrl;shift resize +0 +10%
+# bind l:ctrl;shift resize +10% +0
+# bind h:ctrl;shift resize -10% +0
+# bind j:ctrl;shift resize +0 -10%
+# bind k:ctrl;shift resize +0 +10%
 
-bind l:ctrl;alt nudge +10% +0
-bind h:ctrl;alt nudge -10% +0
-bind j:ctrl;alt nudge +0 -10%
-bind k:ctrl;alt nudge +0 +10%
+# bind l:ctrl;alt nudge +10% +0
+# bind h:ctrl;alt nudge -10% +0
+# bind j:ctrl;alt nudge +0 -10%
+# bind k:ctrl;alt nudge +0 +10%
