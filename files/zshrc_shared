@@ -28,6 +28,10 @@ DISABLE_AUTO_UPDATE="true"
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # plugins=(brew bundler cap gem git github osx rails3 ruby rvm textmate)
 
+if [[ -z "$EDITOR" ]]; then
+	export EDITOR='subl -w'
+fi
+
 source $ZSH/oh-my-zsh.sh
 
 # Customize to your needs...
@@ -56,3 +60,4 @@ alias rvm='nocorrect rvm'
 # Other aliases...
 alias p='cd $PROJECTS_PATH'
 alias simple-http-server="python -m SimpleHTTPServer"
+

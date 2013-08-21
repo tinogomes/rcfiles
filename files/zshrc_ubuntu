@@ -1,11 +1,9 @@
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # Example format: plugins=(rails git textmate ruby lighthouse)
-plugins=(brew bundler cap gem git github rails3 ruby rvm)
+plugins=(brew bundler cap gem git rails ruby rvm)
 
 # Load local settings
 [[ -s ~/.zshrc_local ]] && source ~/.zshrc_local
-
-export EDITOR=vim
 
 source ~/.zshrc_shared
 
