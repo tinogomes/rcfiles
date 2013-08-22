@@ -45,10 +45,6 @@
 [instaweb]
   httpd = webrick
 
-[log]
-  date     = relative
-  decorate = short
-
 [merge "bundlelock"]
   name   = bundle lock
   driver = "rm -f Gemfile.lock; bundle check"
