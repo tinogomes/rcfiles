@@ -29,7 +29,7 @@ DISABLE_AUTO_UPDATE="true"
 # plugins=(brew bundler cap gem git github osx rails3 ruby rvm textmate)
 
 if [[ -z "$EDITOR" ]]; then
-	export EDITOR='subl -w'
+	export EDITOR='vim'
 fi
 
 source $ZSH/oh-my-zsh.sh
@@ -61,3 +61,4 @@ alias rvm='nocorrect rvm'
 alias p='cd $PROJECTS_PATH'
 alias simple-http-server="python -m SimpleHTTPServer"
 
+alias s='subl'
