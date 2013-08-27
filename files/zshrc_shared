@@ -51,11 +51,11 @@ if [[ ! -d "$PROJECTS_PATH" ]]; then
 fi
 
 # Disable nocorrect for...
-alias bundle="nocorrect bundle"
-alias git="nocorrect git"
-alias gitx="nocorrect gitx"
-alias heroku='nocorrect heroku'
-alias rvm='nocorrect rvm'
+# alias bundle="nocorrect bundle"
+# alias git="nocorrect git"
+# alias gitx="nocorrect gitx"
+# alias heroku='nocorrect heroku'
+# alias rvm='nocorrect rvm'
 
 # Other aliases...
 alias p='cd $PROJECTS_PATH'
