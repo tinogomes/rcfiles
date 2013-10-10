@@ -35,7 +35,7 @@ ln -s $HOME/.rcfiles/files/pryrc $HOME/.pryrc
 ln -s $HOME/.rcfiles/files/rdebugrc $HOME/.rdebugrc
 ln -s $HOME/.rcfiles/files/vimrc $HOME/.vimrc
 ln -s $HOME/.rcfiles/files/zshrc_shared $HOME/.zshrc_shared
-
+ln -s $HOME/.rcfiles/files/tm_properties $HOME/.tm_properties
 
 if [ -f $HOME/.zshrc ]; then
 	echo "Backing up your $HOME/.zshrc file into $HOME/.zshrc_original"

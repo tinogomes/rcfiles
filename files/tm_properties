@@ -1,0 +1,16 @@
+myExtraExcludes = "coverage,tmp,log"
+excludeDirectories  = '{$excludeeDirectories,$myExtraExcludes}'
+excludeInFileChooser = '{$excludeeDirectories,$myExtraExcludes}'
+excludeInFolderSearch = '{$excludeeDirectories,$myExtraExcludes}'
+
+fontName = 'Menlo-Regular'
+fontSize = 16
+
+showInvisibles = true
+
+[ attr.untitled ]
+fileType         = source.ruby
+
+[ "{README,INSTALL,LICENSE,TODO}" ]
+fileType         = "text.plain"
+
