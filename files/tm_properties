@@ -1,4 +1,4 @@
-myExtraExcludes = "coverage,tmp,log"
+myExtraExcludes = "coverage,tmp,log,solr"
 excludeDirectories  = '{$excludeeDirectories,$myExtraExcludes}'
 excludeInFileChooser = '{$excludeeDirectories,$myExtraExcludes}'
 excludeInFolderSearch = '{$excludeeDirectories,$myExtraExcludes}'
@@ -12,5 +12,11 @@ showInvisibles = true
 fileType         = source.ruby
 
 [ "{README,INSTALL,LICENSE,TODO}" ]
-fileType         = "text.plain"
+fileType         = text.plain
+
+[ *_spec.rb ]
+fileType         = source.ruby.rspec
+
+[ *.rabl ]
+fileType         = source.ruby
 
