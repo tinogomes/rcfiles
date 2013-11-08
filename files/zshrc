@@ -1,3 +1,15 @@
+PROJECTS_PATH="$HOME/Projects"
+
+# Load local settings
+[[ -s ~/.zshrc_local ]] && source ~/.zshrc_local
+
+if [[ "$(uname)" == "Darwin" ]]
+then
+  source ~/.rcfiles/files/zshrc_osx
+else 
+  source ~/.rcfiles/fines/zshrc_ubuntu
+fi
+
 # Path to your oh-my-zsh configuration.
 ZSH=$HOME/.oh-my-zsh
 
@@ -35,8 +47,7 @@ source $ZSH/oh-my-zsh.sh
 # Customize to your needs...
 
 # Some environment variables
-export PATH=/usr/local/bin:/usr/local/sbin:/usr/bin:/bin:/usr/sbin:/sbin::/usr/X11/bin:/usr/local/share/npm/bin:$PATH:$HOME/.rvm/bin:.:./bin:~/bin
-export PROJECTS_PATH="$HOME/Projects"
+export PATH=$PATH:$HOME/.rvm/bin:.:./bin:~/bin
 export CDPATH=.:~:$PROJECTS_PATH
 
 export RUBY_OPT='-E utf-8'
@@ -51,3 +62,4 @@ fi
 # Other aliases...
 alias p='cd $PROJECTS_PATH'
 alias simple-http-server="python -m SimpleHTTPServer"
+alias ssh-key-copy="cat ~/.ssh/id_rsa.pub | pbcopy"
