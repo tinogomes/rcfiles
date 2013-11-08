@@ -24,7 +24,7 @@ DISABLE_AUTO_UPDATE="true"
 
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # Example format: plugins=(rails git textmate ruby lighthouse)
-# plugins=(brew bundler cap gem git github osx rails3 ruby rvm textmate)
+plugins=(brew bundler cap gem git rails ruby rvm)
 
 if [[ -z "$EDITOR" ]]; then
 	export EDITOR='vim'
@@ -35,7 +35,7 @@ source $ZSH/oh-my-zsh.sh
 # Customize to your needs...
 
 # Some environment variables
-export PATH=/usr/local/bin:/usr/local/sbin:/usr/bin:/bin:/usr/sbin:/sbin::/usr/X11/bin:/usr/local/share/npm/bin:$HOME/.rvm/bin:.:./bin:~/bin:$PATH
+export PATH=/usr/local/bin:/usr/local/sbin:/usr/bin:/bin:/usr/sbin:/sbin::/usr/X11/bin:/usr/local/share/npm/bin:$PATH:$HOME/.rvm/bin:.:./bin:~/bin
 export PROJECTS_PATH="$HOME/Projects"
 export CDPATH=.:~:$PROJECTS_PATH
 
@@ -48,15 +48,6 @@ if [[ ! -d "$PROJECTS_PATH" ]]; then
 	mkdir "$PROJECTS_PATH"
 fi
 
-# Disable nocorrect for...
-# alias bundle="nocorrect bundle"
-# alias git="nocorrect git"
-# alias gitx="nocorrect gitx"
-# alias heroku='nocorrect heroku'
-# alias rvm='nocorrect rvm'
-
 # Other aliases...
 alias p='cd $PROJECTS_PATH'
 alias simple-http-server="python -m SimpleHTTPServer"
-
-alias s='subl'

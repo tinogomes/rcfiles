@@ -1,8 +1,8 @@
-# Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
-# Example format: plugins=(rails git textmate ruby lighthouse)
-plugins=(brew bundler cap explainshell gem git rails ruby rvm osx)
-
 # Load local settings
 [[ -s ~/.zshrc_local ]] && source ~/.zshrc_local
 
 source ~/.zshrc_shared
+
+alias lock="open -a ScreenSaverEngine"
+alias faggy='say -v Good\ News faggy faggy faggy faggy faggy faggy faggy faggy'
+alias ssh-key-copy="cat ~/.ssh/id_rsa.pub | pbcopy"
