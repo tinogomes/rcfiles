@@ -47,7 +47,7 @@ source $ZSH/oh-my-zsh.sh
 # Customize to your needs...
 
 # Some environment variables
-export PATH=$PATH:$HOME/.rvm/bin:.:./bin:~/bin
+export PATH=.:./bin:~/bin:/usr/local/bin:$PATH:$HOME/.rvm/bin
 export CDPATH=.:~:$PROJECTS_PATH
 
 export RUBY_OPT='-E utf-8'
@@ -63,3 +63,4 @@ fi
 alias p='cd $PROJECTS_PATH'
 alias simple-http-server="python -m SimpleHTTPServer"
 alias ssh-key-copy="cat ~/.ssh/id_rsa.pub | pbcopy"
+alias gith=hub
