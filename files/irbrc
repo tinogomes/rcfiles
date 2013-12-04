@@ -9,6 +9,8 @@ if defined?(Pry)
     ActiveRecord::Base.instance_eval { alias :[] :find }
   end
 
+  load "~/.irbeditorrc"
+
   Pry.start
   exit
 end
