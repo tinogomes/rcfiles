@@ -4,9 +4,15 @@ excludeInFileChooser = '{$excludeeDirectories,$myExtraExcludes}'
 excludeInFolderSearch = '{$excludeeDirectories,$myExtraExcludes}'
 
 fontName = 'Menlo-Regular'
-fontSize = 16
+fontSize = 18
 
-showInvisibles = true
+showInvisibles   = true
+showWrapColumn   = true
+softTabs         = true
+softWrap         = false
+spellChecking    = false
+tabSize          = 2
+wrapColumn       = 80
 
 [ attr.untitled ]
 fileType         = source.ruby
@@ -14,9 +20,23 @@ fileType         = source.ruby
 [ "{README,INSTALL,LICENSE,TODO}" ]
 fileType         = text.plain
 
+[ *.rabl ]
+fileType         = source.ruby
+
+[ *.rb]
+fileType         = source.ruby.rails
+
 [ *_spec.rb ]
 fileType         = source.ruby.rspec
 
-[ *.rabl ]
+[ "{Guardfile,Gemfile}" ]
 fileType         = source.ruby
+
+[ source.js ]
+softTabs         = false
+
+[ source.ruby ]
+showInvisibles   = true
+softWrap         = false
+spellChecking    = false
 
