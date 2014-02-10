@@ -33,7 +33,7 @@ fileType         = source.ruby.rspec
 fileType         = source.ruby
 
 [ source.js ]
-softTabs         = false
+softTabs         = true
 
 [ source.ruby ]
 showInvisibles   = true
