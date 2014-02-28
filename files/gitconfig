@@ -1,57 +1,59 @@
 [alias]
-  br = branch
-  bra = branch -a
-  brr = branch -r
-  ci = commit
-  cim = commit -m
-  ciam = commit -am
-  co = checkout
-  cob = checkout -b
-  cp = cherry-pick
-  diffs = diff --staged
-  diffw = diff --word-diff
-  llog = log --pretty='format:%Cgreen%h %Cred%ar %Creset-- %s (%an)' --max-count=20
-  one = log --pretty=oneline --abbrev-commit -20 --decorate
-  oneg = log --oneline --graph
-  rb = rebase
-  rbc = rebase --continue
-  rbs = rebase --skip
-  rp = remote prune
-  ru = remote update
-  st = status
-  sts = status -sb
-  uncommit = reset --soft HEAD^
-  who = shortlog -s
+    br = branch
+    bra = branch -a
+    brr = branch -r
+    ci = commit
+    cim = commit -m
+    ciam = commit -am
+    co = checkout
+    cob = checkout -b
+    cp = cherry-pick
+    diffs = diff --staged
+    diffw = diff --word-diff
+    llog = log --pretty='format:%Cgreen%h %Cred%ar %Creset-- %s (%an)' --max-count=20
+    one = log --pretty=oneline --abbrev-commit -20 --decorate
+    oneg = log --oneline --graph
+    rb = rebase
+    rbc = rebase --continue
+    rbs = rebase --skip
+    rp = remote prune
+    ru = remote update
+    st = status
+    sts = status -sb
+    uncommit = reset --soft HEAD^
+    who = shortlog -s
+    wip = commit -m WIP
 
 [color]
-  branch = auto
-  diff   = auto
-  grep   = auto
-  status = auto
-  ui     = auto
+    branch = auto
+    diff   = auto
+    grep   = auto
+    status = auto
+    ui     = auto
 
 [core]
-  editor         = $EDITOR
-  excludesfile   = $HOME/.gitignore_global
-  attributesfile = $HOME/.gitattributes-global
+    editor         = $EDITOR
+    excludesfile   = $HOME/.gitignore_global
+    attributesfile = $HOME/.gitattributes-global
+    pager = less -F -X
 
 [github]
-  user = tinogomes
+    user = tinogomes
 
 [help]
-  autocorrect = 1
-  format = web
+    autocorrect = 1
+    format = web
 
 [instaweb]
-  httpd = webrick
+    httpd = webrick
 
 [merge "bundlelock"]
-  name   = bundle lock
-  driver = "rm -f Gemfile.lock; bundle check"
+    name   = bundle lock
+    driver = "rm -f Gemfile.lock; bundle check"
 
 [user]
-  email = tinorj@gmail.com
-  name = tinogomes
+    email = tinorj@gmail.com
+    name = tinogomes
 
 [push]
-  default = current
+    default = current
