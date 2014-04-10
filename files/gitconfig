@@ -10,7 +10,9 @@
     cp = cherry-pick
     diffs = diff --staged
     diffw = diff --word-diff
+    ll = log --pretty=format:"%C(yellow)%h%Cred%d\\ %Creset%s%Cblue\\ [%cn]" --decorate --numstat
     llog = log --pretty='format:%Cgreen%h %Cred%ar %Creset-- %s (%an)' --max-count=20
+    ls = log --pretty=format:"%C(yellow)%h%Cred%d\\ %Creset%s%Cblue\\ [%cn]" --decorate
     one = log --pretty=oneline --abbrev-commit -20 --decorate
     oneg = log --oneline --graph
     rb = rebase
@@ -57,3 +59,5 @@
 
 [push]
     default = current
+[branch]
+	autosetupmerge = true
