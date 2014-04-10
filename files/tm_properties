@@ -12,7 +12,7 @@ softTabs         = true
 softWrap         = false
 spellChecking    = false
 tabSize          = 2
-wrapColumn       = 80
+wrapColumn       = 120
 
 [ attr.untitled ]
 fileType         = source.ruby
