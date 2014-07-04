@@ -1,3 +1,7 @@
 alias lock='gnome-screensaver-command -l'
 alias pbcopy='xclip -selection clipboard'
 alias pbpaste='xclip -selection clipboard -o'
+
+alias apt-install='sudo apt-get install'
+alias apt-remove='sudo apt-get remove'
+alias apt-search='apt-get search'
