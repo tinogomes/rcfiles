@@ -29,7 +29,7 @@ fileType         = source.ruby.rails
 [ *_spec.rb ]
 fileType         = source.ruby.rspec
 
-[ "{Guardfile,Gemfile}" ]
+[ "{Guardfile,Gemfile,Vagrantfile}" ]
 fileType         = source.ruby
 
 [ source.js ]
