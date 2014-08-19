@@ -4,5 +4,9 @@ alias pbpaste='xclip -selection clipboard -o'
 
 alias apt-install='sudo apt-get install'
 alias apt-remove='sudo apt-get remove'
-alias apt-search='apt-cache search'
 alias apt-update='sudo apt-get update'
+alias apt-upgrade='sudo apt-get upgrade'
+alias apt-autoremove='sudo apt-get autoremove'
+alias apt-autoclean='sudo apt-get autoclean'
+
+alias apt-search='apt-cache search'
