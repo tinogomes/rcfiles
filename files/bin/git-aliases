@@ -1,0 +1,1 @@
+git config --get-regexp alias | sed -r 's/alias\.(\w+)/\1\t/'

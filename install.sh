@@ -46,6 +46,7 @@ ln -s $HOME/.rcfiles/files/rdebugrc $HOME/.rdebugrc
 ln -s $HOME/.rcfiles/files/tm_properties $HOME/.tm_properties
 ln -s $HOME/.rcfiles/files/vimrc $HOME/.vimrc
 ln -s $HOME/.rcfiles/files/zshrc $HOME/.zshrc
+ln -s $HOME/.rcfiles/files/bin $HOME/bin
 
 echo "Changing default shell for Z Shell"
 chsh -s /usr/local/bin/zsh
