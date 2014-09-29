@@ -6,7 +6,7 @@ PROJECTS_PATH="$HOME/Projects"
 if [[ "$(uname)" == "Darwin" ]]
 then
   source ~/.rcfiles/files/zshrc_osx
-else 
+else
   source ~/.rcfiles/files/zshrc_ubuntu
 fi
 
@@ -36,7 +36,11 @@ DISABLE_AUTO_UPDATE="true"
 
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # Example format: plugins=(rails git textmate ruby lighthouse)
-plugins=(brew bundler cap gem git rails ruby rspec rvm vagrant)
+if [[ -n $OHMYZSH_PLUGINS ]]; then
+  plugins=$PLUGINS
+else
+  plugins=(brew bundler cap gem git httpie rails ruby rspec rvm vagrant composer)
+fi
 
 if [[ -z "$EDITOR" ]]; then
 	export EDITOR='vim'
@@ -47,7 +51,7 @@ source $ZSH/oh-my-zsh.sh
 # Customize to your needs...
 
 # Some environment variables
-export PATH=.:./bin:~/bin:/usr/local/bin:$PATH:$HOME/.rvm/bin
+export PATH=.:./bin:$HOME/bin:/usr/local/bin:$HOME/.rvm/bin:$PATH
 export CDPATH=.:~:$PROJECTS_PATH
 
 export RUBY_OPT='-E utf-8'
@@ -63,4 +67,3 @@ fi
 alias p='cd $PROJECTS_PATH'
 alias simple-http-server="python -m SimpleHTTPServer"
 alias ssh-key-copy="cat ~/.ssh/id_rsa.pub | pbcopy"
-alias gith=hub
