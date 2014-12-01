@@ -8,6 +8,7 @@
     co = checkout
     cob = checkout -b
     cp = cherry-pick
+    dif = diff
     diffs = diff --staged
     diffw = diff --word-diff
     ll = log --pretty=format:"%C(yellow)%h%Cred%d\\ %Creset%s%Cblue\\ [%cn]" --decorate --numstat
@@ -22,9 +23,9 @@
     ru = remote update
     st = status
     sts = status -sb
-    uncommit = reset --soft HEAD^
+    uncommit = reset HEAD^
     who = shortlog -s
-    wip = commit -m WIP
+    wip = !git add . --all && git commit -m WIP
 
 [color]
     branch = auto
