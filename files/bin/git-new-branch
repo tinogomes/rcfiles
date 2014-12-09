@@ -1,0 +1,2 @@
+new_branch_name=$(git-branch-name $*)
+git checkout -b $new_branch_name

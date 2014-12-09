@@ -1,0 +1,2 @@
+new_branch_name=$(git-branch-name-for hotfix $*)
+git checkout -b $new_branch_name
