@@ -36,11 +36,7 @@ DISABLE_AUTO_UPDATE="true"
 
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # Example format: plugins=(rails git textmate ruby lighthouse)
-if [[ -n $OHMYZSH_PLUGINS ]]; then
-  plugins=$PLUGINS
-else
-  plugins=(brew bundler cap gem git httpie rails ruby rspec rvm vagrant composer)
-fi
+plugins=(brew bundler cap gem git httpie rails ruby rspec rvm vagrant composer aws)
 
 if [[ -z "$EDITOR" ]]; then
 	export EDITOR='vim'
