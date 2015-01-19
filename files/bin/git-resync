@@ -1,0 +1,6 @@
+branch_tmp='tmp-'$(date +%F)
+git checkout -b $branch_tmp
+git branch -D master
+git fetch -p
+git checkout -b master origin/master
+git branch -D $branch_tmp
