@@ -1,0 +1,6 @@
+#!/bin/sh
+
+current_branch=$(git branch | grep '*' | sed -e 's/^* //')
+git checkout $1
+git pull
+git merge $current_branch
