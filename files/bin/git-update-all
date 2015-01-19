@@ -1,4 +1,0 @@
-echo 'Fetching repo with remote'
-git fetch
-echo 'Pruning remote branches'
-git remote prune origin
