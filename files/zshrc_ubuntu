@@ -8,5 +8,14 @@ alias apt-update='sudo apt-get update'
 alias apt-upgrade='sudo apt-get upgrade'
 alias apt-autoremove='sudo apt-get autoremove'
 alias apt-autoclean='sudo apt-get autoclean'
+alias apt-purge='sudo apt-get purge'
+
+alias apti=apt-install
+alias aptup=apt-update
+alias aptug=apt-upgrade
+alias aptr=apt-remove
+alias aptac=apt=autoclean
+alias aptar=apt-autoremove
 
 alias apt-search='apt-cache search'
+alias apts=apt-search
