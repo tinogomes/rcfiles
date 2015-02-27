@@ -17,6 +17,7 @@ set fileformats=unix,mac,dos
 set cursorline
 set autoread " automatically reloads file if changed outside
 set ruler
+set paste "paste from clipboard without identation
 
 " tab/indentation configuration
 set softtabstop=2
