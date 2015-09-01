@@ -18,6 +18,7 @@
     one = log --pretty=oneline --abbrev-commit -20 --decorate
     oneg = log --oneline --graph
     rb = rebase
+    rba = rebase --abort
     rbc = rebase --continue
     rbs = rebase --skip
     rp = remote prune
