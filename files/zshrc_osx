@@ -2,10 +2,5 @@ function rspec-and-say () {
 	RAILS_ENV=test bundle exec rspec $* && say yes, you did it\! || say oh, no\!
 }
 
-function cdf() {
-  cd `osascript -e 'tell application "Finder" to if window 1 exists then if target of window 1 as string is not ":" then get POSIX path of (target of window 1 as alias)'`
-}
-
-
 alias lock='open -a ScreenSaverEngine'
 alias faggy='say -v Good\ News faggy faggy faggy faggy faggy faggy faggy faggy'
