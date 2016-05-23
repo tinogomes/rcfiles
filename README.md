@@ -3,7 +3,7 @@
 ## Requirements
 
 * Z Shell - http://www.zsh.org/
-* Oh my zsh - https://github.com/tinogomes/oh-my-zsh
+* Oh my zsh - https://github.com/robbyrussell/oh-my-zsh
 * Slate - https://github.com/jigish/slate *Mac
 
 ## How to install
