@@ -20,8 +20,10 @@ cd $HOME
 if [ ! -d $HOME/.oh-my-zsh ]; then
   echo "Getting OM-MY_ZSH"
   git clone https://github.com/robbyrussell/oh-my-zsh.git .oh-my-zsh || exit 1
+  mv .oh-my-zsh/custom .oh-my-zsh/custom-original
   echo "Getting My OH-MY-ZSH customs"
   git clone https://github.com/tinogomes/oh-my-zsh-custom.git .oh-my-zsh/custom || exit 1
+  cp -R .oh-my-zsh/custom-original/* .oh-my-zsh/custom
 fi
 
 if [ ! -d $HOME/.rcfiles ]; then
