@@ -62,5 +62,9 @@
 
 [push]
     default = current
+
 [branch]
 	autosetupmerge = true
+
+[remote "origin"]
+	prune = true
