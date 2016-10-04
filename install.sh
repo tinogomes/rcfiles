@@ -4,14 +4,14 @@ function is_osx () {
 
 if git >/dev/null || [ ! -f /usr/local/bin/zsh ]; then
   echo 'Verify if you have installed Git and Z Shell yet.'
-  
+
   if is_osx; then
     echo "$ brew install git zsh"
   else
     echo "$ sudo apt-get update"
     echo "$ sudo apt-get install git-core zsh"
   fi
-  
+
   exit 1
 fi
 
@@ -59,7 +59,8 @@ chsh -s /usr/local/bin/zsh
 
 if [ is_osx ]
   then
-  # ln -s $HOME/.rcfiles/files/slate $HOME/.slate
+  ln -s $HOME/.rcfiles/files/slate $HOME/.slate
+
   echo "Installing https://github.com/jigish/slate"
   echo "------------------------------------------"
   echo "Note: You must turn on the Accessibility API by checking"
