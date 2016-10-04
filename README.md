@@ -9,6 +9,8 @@
 
 ## How to install
 
+Check if you follow DiffMerge for [Mac](https://sourcegear.com/diffmerge/webhelp/sec__inst__mac.html) or [Linux](https://sourcegear.com/diffmerge/webhelp/sec__inst__ubuntu.html)
+
 ### Via `curl` (that works fine... on my machine)
 
     $ curl -L https://raw.github.com/tinogomes/rcfiles/master/install.sh | sh
