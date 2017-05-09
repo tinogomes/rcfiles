@@ -27,7 +27,7 @@
     sts = status -sb
     uncommit = reset HEAD^
     who = shortlog -s
-    wip = !git add . --all && git commit -m WIP
+    wip = !git add . --all && git commit -nm WIP
 
 [color]
     branch = auto
