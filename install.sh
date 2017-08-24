@@ -6,10 +6,11 @@ if git >/dev/null || [ ! -f /usr/local/bin/zsh ]; then
   echo 'Verify if you have installed Git and Z Shell yet.'
 
   if is_osx; then
-    echo "$ brew install git zsh"
+    echo "$ brew install git zsh git-lfs"
   else
     echo "$ sudo apt-get update"
     echo "$ sudo apt-get install git-core zsh"
+    echo "# Instructions to install GIT LFS: https://github.com/git-lfs/git-lfs/wiki/Installation#ubuntu"
   fi
 
   exit 1
