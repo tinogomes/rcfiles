@@ -41,6 +41,11 @@ if [ -f $HOME/.zshrc ]; then
   mv $HOME/.zshrc $HOME/.zshrc_original
 fi
 
+ln -s $HOME/.rcfiles/files/bin $HOME/bin
+
+for file in (words); do
+  #statements
+done
 ln -s $HOME/.rcfiles/files/gemrc $HOME/.gemrc
 ln -s $HOME/.rcfiles/files/gitattributes-global $HOME/.gitattributes
 ln -s $HOME/.rcfiles/files/gitconfig $HOME/.gitconfig
@@ -48,11 +53,11 @@ ln -s $HOME/.rcfiles/files/gitignore_global $HOME/.gitignore_global
 ln -s $HOME/.rcfiles/files/irbeditorrc $HOME/.irbeditorrc
 ln -s $HOME/.rcfiles/files/irbrc $HOME/.irbrc
 ln -s $HOME/.rcfiles/files/pryrc $HOME/.pryrc
+ln -s $HOME/.rcfiles/files/railsrc $HOME/.railsrc
 ln -s $HOME/.rcfiles/files/rdebugrc $HOME/.rdebugrc
 ln -s $HOME/.rcfiles/files/tm_properties $HOME/.tm_properties
 ln -s $HOME/.rcfiles/files/vimrc $HOME/.vimrc
 ln -s $HOME/.rcfiles/files/zshrc $HOME/.zshrc
-ln -s $HOME/.rcfiles/files/bin $HOME/bin
 
 echo "Changing default shell for Z Shell"
 chsh -s /usr/local/bin/zsh
