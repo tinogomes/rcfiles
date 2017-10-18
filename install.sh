@@ -44,9 +44,6 @@ fi
 
 ln -s $HOME/.rcfiles/files/bin $HOME/bin
 
-for file in (words); do
-  #statements
-done
 ln -s $HOME/.rcfiles/files/gemrc $HOME/.gemrc
 ln -s $HOME/.rcfiles/files/gitattributes-global $HOME/.gitattributes
 ln -s $HOME/.rcfiles/files/gitconfig $HOME/.gitconfig
