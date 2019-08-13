@@ -45,7 +45,7 @@ source $ZSH/oh-my-zsh.sh
 # Customize to your needs...
 
 # Some environment variables
-export PATH=".:./bin:$HOME/bin:$HOME/.rvm/bin:/usr/local/sbin:$PATH" # Add RVM to PATH for scripting
+export PATH=".:./bin:$HOME/bin:$HOME/.rcfiles/files/bin:$HOME/.rvm/bin:/usr/local/sbin:$PATH" # Add RVM to PATH for scripting
 
 export RUBY_OPT='-E utf-8'
 export LC_ALL="en_US.UTF-8"
