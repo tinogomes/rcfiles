@@ -51,5 +51,7 @@ export RUBY_OPT='-E utf-8'
 export LC_ALL="en_US.UTF-8"
 export LANG="en_US.UTF-8"
 
+[[ -s ~/.zshrc_path ]] && source ~/.zshrc_path
+
 # Other aliases...
 alias 'simple-http-server'='python -m SimpleHTTPServer 8000'
