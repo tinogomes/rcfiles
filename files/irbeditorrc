@@ -1,3 +1,5 @@
+puts "Loading .irbeditorrc"
+
 # configure vim
 @irb_temp_code = nil
 
@@ -22,9 +24,12 @@ end
 puts "gedit available."
 
 private
+
 def open_with(editor, file=nil)
+  require "tempfile"
   file = file || @irb_temp_code || Tempfile.new("irb_tempfile").path+".rb"
   system("#{editor} #{file}")
+
   if(File.exists?(file) && File.size(file)>0)
     Object.class_eval(File.read(file))
     @irb_temp_code = file

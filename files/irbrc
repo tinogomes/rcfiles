@@ -1,23 +1,12 @@
-# Add `gem "pry"` into your Gemfile to load Pry console
-if defined?(Pry)
-  if defined?(ActiveRecord)
-    require 'logger'
-    # Replace ActiveRecord logger
-    ActiveRecord::Base.logger = Logger.new(STDOUT)
+puts "Loading .irbrc"
 
-    # Set up ActiveRecord shortcut
-    ActiveRecord::Base.instance_eval { alias :[] :find }
-  end
-
-  load "~/.irbeditorrc"
-
-  Pry.start
-  exit
+def r!
+  puts "Reloading environment..."
+  reload!
 end
 
 require "irb/completion"         # activate default completion
 require "irb/ext/save-history"   # activate default history
-require "tempfile"               # used for Vim integration
 
 gems = {
   :rubygems => proc { true },
@@ -67,3 +56,11 @@ IRB.conf[:IRB_RC] = Proc.new do
   end
 end
 
+if defined?(ActiveRecord)
+  require 'logger'
+  # Replace ActiveRecord logger
+  ActiveRecord::Base.logger = Logger.new(STDOUT)
+
+  # Set up ActiveRecord shortcut
+  ActiveRecord::Base.instance_eval { alias :[] :find }
+end
