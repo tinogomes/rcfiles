@@ -34,7 +34,7 @@ DISABLE_AUTO_UPDATE="true"
 
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # Example format: plugins=(rails git textmate ruby lighthouse)
-plugins=(brew bundler docker docker-compose gem git httpie osx rails ruby rspec rvm vagrant)
+plugins=(kafka brew bundler docker docker-compose gem git httpie osx rails ruby rvm vagrant web-search)
 
 if [[ -z "$EDITOR" ]]; then
 	export EDITOR='vim'

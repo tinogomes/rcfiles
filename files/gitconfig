@@ -2,6 +2,7 @@
     br = branch
     bra = branch -a
     brd = !git checkout master && git branch | grep -v master | sed -e 's/^/git br -D/' | sh
+    brn = new-branch
     brr = branch -r
     ci = commit
     cim = commit -m
