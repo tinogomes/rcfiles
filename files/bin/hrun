@@ -1,0 +1,70 @@
+#!/usr/bin/env bash
+
+show_help() {
+  echo "Aqui vai o help"
+}
+
+if [[ -f .heroku_app ]]; then
+  app=$(cat .heroku_app)
+  confirm_app=1
+fi
+
+cmd=$1
+shift
+
+case $cmd in
+  console|bash|rake|rails)
+    args=$cmd
+    cmd="run"
+    ;;
+esac
+
+while :; do
+  case $1 in
+    -a|--app)
+      app=$2
+      confirm_app=0
+      shift
+      ;;
+    --no-app)
+      confirm_app=0
+      app=no-app
+      ;;
+    *)
+      args="$args $1"
+  esac
+
+  shift
+
+  if [[ "$1" == "" ]]; then
+    break
+  fi
+done
+
+if [[ -z "$cmd" ]]; then
+  echo "Requires a heroku command. Type heroku commands to discover then"
+  exit 1
+fi
+
+if [[ -z "$app" && "$app" != "no-app" ]]; then
+  echo "requires an app name -a or --app <app_name>"
+  exit 1
+fi
+
+if [[ $confirm_app -eq 1 ]]; then
+  echo "Enter name of app: (latest: $app | 'no-app' to ignore -a parameter )"
+  read REPLY
+
+  if [[ $REPLY != "" ]]; then
+    app=$REPLY
+  fi
+fi
+
+if [[ "$app" == "no-app" ]]; then
+  echo heroku $cmd $args
+  heroku $cmd $args
+else
+  echo $app > .heroku_app
+  echo heroku $cmd $args -a $app
+  heroku $cmd $args -a $app
+fi
