@@ -36,10 +36,6 @@ DISABLE_AUTO_UPDATE="true"
 # Example format: plugins=(rails git textmate ruby lighthouse)
 plugins=(kafka brew bundler docker docker-compose gem git httpie osx rails ruby rvm vagrant web-search heroku)
 
-if [[ -z "$EDITOR" ]]; then
-	export EDITOR='vim'
-fi
-
 source $ZSH/oh-my-zsh.sh
 
 # Customize to your needs...
@@ -54,4 +50,3 @@ export LANG="en_US.UTF-8"
 [[ -s ~/.zshrc_path ]] && source ~/.zshrc_path
 
 # Other aliases...
-alias 'simple-http-server'='python -m SimpleHTTPServer 8000'
