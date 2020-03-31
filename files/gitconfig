@@ -5,8 +5,8 @@
     brn = new-branch
     brr = branch -r
     ci = commit
-    cim = commit -m
-    ciam = commit -am
+    cim = "!f() { msg=$*; git commit -m \"$msg\";  }; f"
+    ciam = "!f() { msg=$*; git commit -am \"$msg\";  }; f"
     co = checkout
     cob = checkout -b
     cp = cherry-pick
