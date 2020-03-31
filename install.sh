@@ -7,6 +7,7 @@ if git >/dev/null || [ ! -f /usr/local/bin/zsh ]; then
 
   if is_osx; then
     echo "$ brew install git zsh git-lfs"
+    echo "$ brews cask install slate"
   else
     echo "$ sudo apt-get update"
     echo "$ sudo apt-get install git-core zsh"
@@ -19,12 +20,12 @@ fi
 cd $HOME
 
 if [ ! -d $HOME/.oh-my-zsh ]; then
-  echo "Getting OM-MY_ZSH"
-  git clone https://github.com/robbyrussell/oh-my-zsh.git .oh-my-zsh || exit 1
-  mv .oh-my-zsh/custom .oh-my-zsh/custom-original
-  echo "Getting My OH-MY-ZSH customs"
+  echo "Getting OM MY ZSH from tinogomes' fork repository"
+  git clone https://github.com/tinogomes/ohmyzsh.git .oh-my-zsh || exit 1
+  echo "Getting My OH-MY-ZSH custom plugin and theme"
   git clone https://github.com/tinogomes/oh-my-zsh-custom.git .oh-my-zsh/custom || exit 1
-  cp -R .oh-my-zsh/custom-original/* .oh-my-zsh/custom
+  echo "Getting zsh-syntax-highlighting"
+  git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ~/.oh-my-zsh/custom/plugins/zsh-syntax-highlighting || exit 1
 fi
 
 if [ ! -d $HOME/.rcfiles ]; then
@@ -64,12 +65,7 @@ if [ is_osx ]
   then
   ln -s $HOME/.rcfiles/files/slate $HOME/.slate
 
-  echo "Installing https://github.com/jigish/slate"
-  echo "------------------------------------------"
-  echo "Note: You must turn on the Accessibility API by checking"
-  echo "System Preferences > Universal Access > Enable access for assistive devices"
-
-  cd /Applications && curl http://www.ninjamonkeysoftware.com/slate/versions/slate-latest.tar.gz | tar -xz && open Slate.app
+  open /Applcations/Slate.app
 fi
 
 echo "Write on $HOME/.zshrc_local file your local settings"

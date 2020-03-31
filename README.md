@@ -3,7 +3,7 @@
 ## Requirements
 
 * Z Shell - http://www.zsh.org/
-* Oh my zsh - https://github.com/robbyrussell/oh-my-zsh
+* Oh my zsh - https://github.com/tinogomes/ohmyzsh (a fork from https://github.com/ohmyzsh/ohmyzsh)
 * DiffMerge - https://sourcegear.com/diffmerge/
 * Slate - https://github.com/jigish/slate *Mac
 
