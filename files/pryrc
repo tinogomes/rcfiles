@@ -33,6 +33,7 @@ begin
   Pry.commands.alias_command 'c', 'continue'
   Pry.commands.alias_command 's', 'step'
   Pry.commands.alias_command 'n', 'next'
+  Pry.commands.alias_command 'f', 'finish'
 rescue
-  warn '=> pry-debugger not load'
+  warn '=> pry-byebug not load'
 end
