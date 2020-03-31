@@ -2,7 +2,7 @@ load "~/.irbrc"
 
 puts "Loading ~/.pryrc"
 
-Pry.config.editor = "vim"
+Pry.config.color = true
 
 Pry.config.prompt = proc do |obj, level, _|
   prompt = ""
