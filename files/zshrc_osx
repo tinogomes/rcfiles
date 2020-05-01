@@ -3,4 +3,3 @@ function rspec-and-say () {
 }
 
 alias lock='open -a ScreenSaverEngine'
-alias faggy='say -v Good\ News faggy faggy faggy faggy faggy faggy faggy faggy'

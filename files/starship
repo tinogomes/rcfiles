@@ -1,0 +1,16 @@
+[kubernetes]
+disabled = false
+
+[kubernetes.context_aliases]
+"gke_jimmys-cast_us-east1-d_fishisfast-staging" = "GCP: staging"
+"gke_ambient-polymer-235619_us-east1-d_fishisfast-replica" = "GCP: replica"
+"gke_ambient-polymer-235619_us-east1-d_fishisfast-production" = "GCP: production"
+
+[time]
+disabled = false
+
+[custom.rvm]
+command = "rvm gemset name"
+files = [ ".ruby-gemset" ]
+disabled = false
+prefix = "@ "

@@ -6,6 +6,7 @@
 * Oh my zsh - https://github.com/tinogomes/ohmyzsh (a fork from https://github.com/ohmyzsh/ohmyzsh)
 * DiffMerge - https://sourcegear.com/diffmerge/
 * Slate - https://github.com/jigish/slate *Mac
+* Starship - https://starship.rs/
 
 ## How to install
 
