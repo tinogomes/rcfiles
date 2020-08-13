@@ -22,6 +22,7 @@ cd $HOME
 if [ ! -d $HOME/.oh-my-zsh ]; then
   echo "Getting OM MY ZSH from tinogomes' fork repository"
   git clone https://github.com/tinogomes/ohmyzsh.git .oh-my-zsh || exit 1
+  mv .oh-my-zsh/custom{,-original}
   echo "Getting My OH-MY-ZSH custom plugin and theme"
   git clone https://github.com/tinogomes/oh-my-zsh-custom.git .oh-my-zsh/custom || exit 1
   echo "Getting zsh-syntax-highlighting"
