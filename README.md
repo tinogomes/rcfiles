@@ -14,7 +14,7 @@ Check if you follow DiffMerge for [Mac](https://sourcegear.com/diffmerge/webhelp
 
 ### Via `curl` (that works fine... on my machine)
 
-    $ curl -L https://raw.github.com/tinogomes/rcfiles/master/install.sh | sh
+    $ curl -L https://raw.github.com/tinogomes/rcfiles/master/install.sh | bash
 
 ### Manual
 
