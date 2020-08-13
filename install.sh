@@ -2,7 +2,7 @@ function is_osx() {
   [[ "$(uname)" == "Darwin" ]]
 }
 
-if git >/dev/null || [ ! -f /usr/local/bin/zsh ]; then
+if git >/dev/null || [ ! -f $(which zsh) ]; then
   echo 'Verify if you have installed Git and Z Shell yet.'
 
   if is_osx; then
