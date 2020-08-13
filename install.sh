@@ -1,4 +1,4 @@
-function is_osx () {
+function is_osx() {
   [[ "$(uname)" == "Darwin" ]]
 }
 
