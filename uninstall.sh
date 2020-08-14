@@ -21,4 +21,4 @@ rm -rf $HOME/.rcfiles
 [[ -L $HOME/.zshrc ]]             && rm $HOME/.zshrc
 [[ -L $HOME/bin ]]                && rm $HOME/bin
 
-mv .zshrc_original .zshrc
+[[ -f .zshrc_original ]] && mv .zshrc_original .zshrc
