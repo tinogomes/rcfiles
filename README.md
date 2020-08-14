@@ -5,6 +5,7 @@
 * Z Shell - http://www.zsh.org/
 * Oh my zsh - https://github.com/tinogomes/ohmyzsh (a fork from https://github.com/ohmyzsh/ohmyzsh)
 * Starship - https://starship.rs/
+* TMux - https://github.com/tmux/tmux
 
 ## How to install
 

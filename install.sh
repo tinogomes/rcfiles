@@ -58,10 +58,11 @@ ln -s $HOME/.rcfiles/files/irbrc $HOME/.irbrc
 ln -s $HOME/.rcfiles/files/pryrc $HOME/.pryrc
 ln -s $HOME/.rcfiles/files/railsrc $HOME/.railsrc
 ln -s $HOME/.rcfiles/files/rdebugrc $HOME/.rdebugrc
+ln -s $HOME/.rcfiles/files/starship $HOME/.starship
 ln -s $HOME/.rcfiles/files/tm_properties $HOME/.tm_properties
+ln -s $HOME/.rcfiles/files/tmux.conf $HOME/.tmux.conf
 ln -s $HOME/.rcfiles/files/vimrc $HOME/.vimrc
 ln -s $HOME/.rcfiles/files/zshrc $HOME/.zshrc
-ln -s $HOME/.rcfiles/files/starship $HOME/.starship
 
 if [ is_osx ]
   then
