@@ -4,15 +4,16 @@ function is_osx() {
   [[ "$(uname)" == "Darwin" ]]
 }
 
-if git >/dev/null || [ ! -f $(which zsh) ]; then
-  echo 'Verify if you have installed Git and Z Shell yet.'
+if git >/dev/null || [ ! -f $(which zsh) ] || starship > /dev/null; then
+  echo 'Verify if you have installed Git, Z Shell, and Starship yet.'
 
   if is_osx; then
-    echo "$ brew install git zsh git-lfs"
+    echo "$ brew install git zsh git-lfs starship"
     echo "$ brews cask install slate"
   else
     echo "$ sudo apt-get update"
     echo "$ sudo apt-get install git-core zsh"
+    echo "$ curl -fsSL https://starship.rs/install.sh | bash"
     echo "# Instructions to install GIT LFS: https://github.com/git-lfs/git-lfs/wiki/Installation#ubuntu"
   fi
 
@@ -63,7 +64,7 @@ ln -s $HOME/.rcfiles/files/zshrc $HOME/.zshrc
 ln -s $HOME/.rcfiles/files/starship $HOME/.starship
 
 echo "Changing default shell for Z Shell"
-chsh -s /usr/local/bin/zsh
+chsh -s $(which zsh)
 
 if [ is_osx ]
   then
