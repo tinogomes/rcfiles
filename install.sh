@@ -63,9 +63,6 @@ ln -s $HOME/.rcfiles/files/vimrc $HOME/.vimrc
 ln -s $HOME/.rcfiles/files/zshrc $HOME/.zshrc
 ln -s $HOME/.rcfiles/files/starship $HOME/.starship
 
-echo "Changing default shell for Z Shell"
-chsh -s $(which zsh)
-
 if [ is_osx ]
   then
   ln -s $HOME/.rcfiles/files/slate $HOME/.slate
@@ -75,3 +72,6 @@ fi
 
 echo "Write on $HOME/.zshrc_local file your local settings"
 echo "# Write here your local settings" >> $HOME/.zshrc_local
+
+echo "Apply zsh as your default shell 'chsh -s $(which zsh)'"
+echo "and reset your terminal, typing 'reset'"
