@@ -47,8 +47,6 @@ if [ -f $HOME/.zshrc ]; then
   mv $HOME/.zshrc $HOME/.zshrc_original
 fi
 
-ln -s $HOME/.rcfiles/files/bin $HOME/bin
-
 ln -s $HOME/.rcfiles/files/gemrc $HOME/.gemrc
 ln -s $HOME/.rcfiles/files/gitattributes-global $HOME/.gitattributes
 ln -s $HOME/.rcfiles/files/gitconfig $HOME/.gitconfig
@@ -56,23 +54,17 @@ ln -s $HOME/.rcfiles/files/gitignore_global $HOME/.gitignore_global
 ln -s $HOME/.rcfiles/files/irbeditorrc $HOME/.irbeditorrc
 ln -s $HOME/.rcfiles/files/irbrc $HOME/.irbrc
 ln -s $HOME/.rcfiles/files/pryrc $HOME/.pryrc
-ln -s $HOME/.rcfiles/files/railsrc $HOME/.railsrc
 ln -s $HOME/.rcfiles/files/rdebugrc $HOME/.rdebugrc
 ln -s $HOME/.rcfiles/files/starship $HOME/.starship
-ln -s $HOME/.rcfiles/files/tm_properties $HOME/.tm_properties
 ln -s $HOME/.rcfiles/files/tmux.conf $HOME/.tmux.conf
 ln -s $HOME/.rcfiles/files/vimrc $HOME/.vimrc
 ln -s $HOME/.rcfiles/files/zshrc $HOME/.zshrc
-
-if [ is_osx ]
-  then
-  ln -s $HOME/.rcfiles/files/slate $HOME/.slate
-
-  open /Applcations/Slate.app
-fi
 
 echo "Write on $HOME/.zshrc_local file your local settings"
 echo "# Write here your local settings" >> $HOME/.zshrc_local
 
 echo "Apply zsh as your default shell 'chsh -s $(which zsh)'"
 echo "and reset your terminal, typing 'reset'"
+if is_osx; then
+  echo "On Mac, remember to install Magnet"
+fi

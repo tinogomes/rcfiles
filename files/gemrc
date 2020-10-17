@@ -1,5 +1,5 @@
 ---
-gem: --no-rdoc --no-ri --verbose --no-document
+gem: --no-rdoc --no-ri --no-document
 backtrace: false
 benchmark: false
 update_sources: true
