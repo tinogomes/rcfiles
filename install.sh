@@ -30,6 +30,8 @@ if [ ! -d $HOME/.oh-my-zsh ]; then
   git clone git@github.com:tinogomes/oh-my-zsh-custom.git .oh-my-zsh/custom || exit 1
   echo "Getting zsh-syntax-highlighting"
   git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ~/.oh-my-zsh/custom/plugins/zsh-syntax-highlighting || exit 1
+  echo "Getting alias-tips"
+  git clone https://github.com/djui/alias-tips.git ~/.oh-my-zsh/custom/plugins/alias-tips || exit 1
 fi
 
 if [ ! -d $HOME/.rcfiles ]; then
