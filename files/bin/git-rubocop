@@ -20,7 +20,7 @@ then
   fi
 
   # Run rubocop with autocorrect
-  rubocop -a -R --force-exclusion ${FILES}
+  rubocop -a --force-exclusion ${FILES}
 
   if [ $? -ne 0 ]; then
     echo "${red}[Ruby Style][Error]: Fix the issues and be happy${NC}"
