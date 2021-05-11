@@ -1,37 +1,34 @@
 puts "Loading .irbrc"
 
-def r!
-  puts "Reloading environment..."
-  reload!
-end
-
 require "irb/completion"         # activate default completion
 require "irb/ext/save-history"   # activate default history
 
 gems = {
   :rubygems => proc { true },
   :wirble => proc {
-    Wirble.init(:skip_prompt=>true,:skip_history=>true)
-    Wirble.colorize
+    Wirble.init(skip_prompt: true, skip_history: true, init_colorw: true)
   },
-  :hirb => proc { Hirb.enable },
+  :hirb => proc {
+    Hirb.enable
+  },
   :ap => proc {
-    IRB::Irb.class_eval do
-      def output_value
-        if @context.inspect?
-          ap(@context.last_value)
-        else
-          printf @context.return_format, @context.last_value
-        end
-      end
-    end
+    puts "use 'ap' for awesome print"
+    # IRB::Irb.class_eval do
+    #   def output_value(*_args)
+    #     if @context.inspect?
+    #       ap(@context.last_value)
+    #     else
+    #       printf @context.return_format, @context.last_value
+    #     end
+    #   end
+    # end
    }
 }
 
 gems.each do |gemname, config|
   begin
     require gemname.to_s
-    puts "Autoloaded '#{gemname}'"
+    puts "Autoloaded '#{gemname}' via '~/.irbrc'"
     config.call
   rescue LoadError => e
     puts "Seems you don't have #{gemname} installed: #{e}"
@@ -40,27 +37,16 @@ end
 
 load "~/.irbeditorrc"
 
-IRB.conf[:SAVE_HISTORY] = 10000
+IRB.conf[:SAVE_HISTORY] = 100
 IRB.conf[:HISTORY_FILE] = "#{ENV["HOME"]}/.irb_history"
 IRB.conf[:AUTO_INDENT]  = true
 IRB.conf[:PROMPT_MODE]  = :SIMPLE
 
-IRB.conf[:IRB_RC] = Proc.new do
-  if defined?(ActiveRecord)
-    require 'logger'
-    # Replace ActiveRecord logger
-    ActiveRecord::Base.logger = Logger.new(STDOUT)
-
-    # Set up ActiveRecord shortcut
-    ActiveRecord::Base.instance_eval { alias :[] :find }
+railsrc_path = File.expand_path('~/.railsrc')
+if ( ENV['RAILS_ENV'] || defined? Rails ) && File.exist?( railsrc_path )
+  begin
+    load railsrc_path
+  rescue Exception
+    warn "Could not load: #{ railsrc_path }" # because of $!.message
   end
-end
-
-if defined?(ActiveRecord)
-  require 'logger'
-  # Replace ActiveRecord logger
-  ActiveRecord::Base.logger = Logger.new(STDOUT)
-
-  # Set up ActiveRecord shortcut
-  ActiveRecord::Base.instance_eval { alias :[] :find }
 end
