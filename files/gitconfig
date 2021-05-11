@@ -83,3 +83,6 @@
 	smudge = git-lfs smudge -- %f
 	process = git-lfs filter-process
 	required = true
+
+[diff "rspec"]
+    xfuncname = "^[ ]*((RSpec|describe|context|it|before|after|around|feature|scenario|background)[ ].*)$"
