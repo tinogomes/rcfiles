@@ -1,3 +1,5 @@
+#!/usr/bin/env bash
+
 first=$1
 shift
 echo "$first/$(git-branch-name $*)"

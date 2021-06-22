@@ -1,3 +1,5 @@
+#!/usr/bin/env bash
+
 branch_tmp='tmp-'$(date +%F)
 git checkout -b $branch_tmp
 git branch -D master
