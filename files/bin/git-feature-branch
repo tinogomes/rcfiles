@@ -1,4 +1,4 @@
-#!/usr/bin/env bash
-
+#!/usr/bin/env sh
+#
 new_branch_name=$(git-branch-name-for feature $*)
 git checkout -b $new_branch_name

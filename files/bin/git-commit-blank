@@ -1,4 +1,4 @@
-#!/usr/bin/env bash
+#!/usr/bin/env sh
 
 message="${*:-Trigger notification}"
 git commit --allow-empty -m $message

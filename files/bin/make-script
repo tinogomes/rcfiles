@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/env sh
 
 if [[ "$#" -lt 1 ]]; then
   echo "Usage: $(basename "$0") [language] <name>"
@@ -8,7 +8,7 @@ if [[ "$#" -lt 1 ]]; then
   echo "* macruby | macrb"
   echo "* python | py"
   echo "* perl | pl"
-  echo "* bash (default)"
+  echo "* sh (default)"
   exit 1
 fi
 
@@ -17,7 +17,7 @@ filename=$2
 
 if [[ -z "$filename" ]]; then
   filename=$lang
-  lang="bash"
+  lang="sh"
 fi
 
 if [[ -e "$filename" ]]; then
@@ -42,7 +42,7 @@ case "$lang" in
     echo -ne "#!/usr/bin/env perl\nuse strict;\nuse warnings;\n\n" > "$filename"
   ;;
   (*)
-    echo -ne "#!/bin/bash\n\n" > "$filename"
+    echo -ne "#!/bin/sh\n\n" > "$filename"
   ;;
 esac
 

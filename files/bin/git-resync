@@ -1,4 +1,4 @@
-#!/usr/bin/env bash
+#!/usr/bin/env sh
 
 branch_tmp='tmp-'$(date +%F)
 git checkout -b $branch_tmp
