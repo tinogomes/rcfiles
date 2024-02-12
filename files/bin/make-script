@@ -5,7 +5,6 @@ if [[ "$#" -lt 1 ]]; then
   echo
   echo "Available languages:"
   echo "* ruby | rb"
-  echo "* macruby | macrb"
   echo "* python | py"
   echo "* perl | pl"
   echo "* sh (default)"
@@ -30,19 +29,16 @@ chmod u+x "$filename"
 
 case "$lang" in
   ("ruby"|"rb")
-    echo -ne "#!/usr/bin/env ruby\n\n" > "$filename"
-  ;;
-  ("macruby"|"macrb")
-    echo -ne "#!/usr/bin/env macruby\n\n" > "$filename"
+    echo -ne "#\!/usr/bin/env ruby\n\n" > "$filename"
   ;;
   ("python"|"py")
-    echo -ne "#!/usr/bin/env python\n\n" > "$filename"
+    echo -ne "#\!/usr/bin/env python\n\n" > "$filename"
   ;;
   ("perl"|"pl")
-    echo -ne "#!/usr/bin/env perl\nuse strict;\nuse warnings;\n\n" > "$filename"
+    echo -ne "#\!/usr/bin/env perl\nuse strict;\nuse warnings;\n\n" > "$filename"
   ;;
   (*)
-    echo -ne "#!/bin/sh\n\n" > "$filename"
+    echo -ne "#\!/bin/sh\n\n" > "$filename"
   ;;
 esac
 
