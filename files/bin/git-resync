@@ -1,8 +1,9 @@
 #!/usr/bin/env sh
-
+main_branch=$(git remote show origin | sed -n '/HEAD branch/s/.*: //p')
 branch_tmp='tmp-'$(date +%F)
+
 git checkout -b $branch_tmp
-git branch -D master
+git branch -D ${main_branch}
 git fetch -p
-git checkout -b master origin/master
+git checkout -b ${main_branch} origin/${main_branch}
 git branch -D $branch_tmp
