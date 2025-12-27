@@ -5,19 +5,28 @@ filetype indent on
 
 " syntax highlight
 syntax on
+set mouse=a
 
-" encoding it UTF-8 no matter what the term says
+" Teclas líder
+let mapleader = " "
+let maplocaleader = "\\"
+
+set wildmenu "show options command menu over command line
+
+" encoding it UTF-7 no matter what the term says
 set encoding=utf-8
 
 set number " show lines
-set numberwidth=5
+set numberwidth=4
 set nocompatible
 set wrap
+set nowrapscan
 set fileformats=unix,mac,dos
 set cursorline
 set autoread " automatically reloads file if changed outside
 set ruler
 set paste "paste from clipboard without identation
+set scrolloff=20
 
 " tab/indentation configuration
 set softtabstop=2
@@ -29,7 +38,6 @@ set smartindent
 
 " search pattern highlight/incremental
 set showmatch
-set hlsearch
 set incsearch
 
 " backup and swap settings
@@ -46,9 +54,51 @@ set statusline+=]\ "
 set statusline+=%=
 set statusline+=\ [%3.(%c%)\ %-7.(%l/%L%)]\ %P
 
-" a few useful shortcuts
-command! Rehash source ~/.vimrc
-
-" python specifics
 autocmd FileType ruby set softtabstop=2
+autocmd FileType ruby nnoremap <leader>s/ :r !fzf ~/.snippets/ruby/
+autocmd FileType ruby nnoremap <leader>sdefs :r ~/.snippets/ruby/defs.rb<cr>
+
 autocmd FileType python set shiftwidth=4
+
+command! Reload source $MYVIMRC
+
+" Toogle Commands
+nnoremap <leader>thc :set list!<cr>            " Toggle Hidden Characters
+nnoremap <leader>thl :set hlsearch!<cr>        " Toggle Highlight Search 
+nnoremap <leader>tic :set ignorecase!<cr>      " Toggle Ignore Case
+nnoremap <leader>tn :set number!<cr>           " Toggle Show Numbers
+nnoremap <leader>trn :set relativenumber!<cr>  " Toggle Relative Number
+nnoremap <leader>tw :set wrap!<cr>             " Toggle wrap
+nnoremap <leader>tws :set wrapscan!<cr>        " Toggle wrap scan
+
+" Tab Management
+nnoremap <leader>tbn :tabnew<cr>               " Tab New
+nnoremap <leader>tbc :tabclose<cr>             " Tab Close
+nnoremap <S-Right> :tabnext<CR>                " Go to Right Tab
+nnoremap <S-Left> :tabprevious<CR>             " Go to Left Tab
+
+" Edit Configuration
+nnoremap <leader>ve :vsplit $MYVIMRC<cr>       " Open .vimrc
+nnoremap <leader>vr :w<cr>:Reload<cr>          " Reload .vimrc
+nnoremap <leader>vR :w<cr>:Reload<cr>:q<cr>    " Reload .vimrc and close it
+
+" Window Management
+nnoremap <leader>wc <C-w>c                     " Close Window
+nnoremap <leader>wn <C-w>n                     " Open new horizontal Window
+nnoremap <leader>wv <C-w>v                     " Open new vertical Window
+
+nnoremap <leader>term :tab term<cr>            " Open the terminal on a new tab
+
+nnoremap <leader>e :Ex<cr>                     " Open :Explorer
+
+" nnoremap <right> :echo "FORGET THE ARROW! Use `l` to move right"<cr>
+" nnoremap <left>  :echo "FORGET THE ARROW! Use `h` to move left"<cr>
+" nnoremap <up>    :echo "FORGET THE ARROW! Use `k` to move up"<cr>
+" nnoremap <down>  :echo "FORGET THE ARROW! Use `j` to move down"<cr>
+
+nnoremap <leader>w :w<cr> " salva o arquivo
+nnoremap <leader>x :x<cr> " salva o arquivo e fecha
+nnoremap <leader>q :q<cr> " fecha o vim se não houver nada pendente
+nnoremap <leader>qq :q!<cr> " fecha o vim, ignorando qualquer pendencia
+
+
