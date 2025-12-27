@@ -1,4 +1,6 @@
 #!/usr/bin/env sh
 
-new_branch_name=$(git-branch-name $*)
+prefix="cg"
+today=$(date -u +%y%m%d)
+new_branch_name=$(git-branch-name "$prefix $today $*")
 git checkout -b $new_branch_name

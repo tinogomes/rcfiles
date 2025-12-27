@@ -1,3 +1,3 @@
 #!/usr/bin/env sh
 
-echo "$*" | tr " " "-"
+echo "$*" | tr " " "-" | tr "[:upper:]" "[:lower:]"
