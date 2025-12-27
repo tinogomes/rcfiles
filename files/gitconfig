@@ -1,4 +1,5 @@
 [alias]
+    amend = commit --amend --no-edit
     br = branch
     bra = branch -a
     brd = !git checkout master && git branch | grep -v master | sed -e 's/^/git br -D/' | sh
@@ -86,3 +87,5 @@
 
 [diff "rspec"]
     xfuncname = "^[ ]*((RSpec|describe|context|it|before|after|around|feature|scenario|background)[ ].*)$"
+[init]
+	defaultBranch = main
