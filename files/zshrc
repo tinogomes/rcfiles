@@ -121,6 +121,5 @@ eval $(starship init zsh)
 
 [[ -s ~/.zshrc_path ]]      && source ~/.zshrc_path      && echo 'loading ~/.zshrc_path'
 [[ -s ~/.zshrc_aliases ]]   && source ~/.zshrc_aliases   && echo 'loading ~/.zshrc_aliases'
-[[ -s ~/.zshrc_subscribe ]]   && source ~/.zshrc_subscribe   && echo 'loading ~/.zshrc_subscribe'
 
 # Other aliases...
