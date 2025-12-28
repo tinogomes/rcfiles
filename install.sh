@@ -8,7 +8,7 @@ if git >/dev/null || [ ! -f $(which zsh) ] || starship > /dev/null; then
   echo 'Verify if you have installed Git, Z Shell, and Starship yet.'
 
   if is_osx; then
-    echo "$ brew install git zsh git-lfs starship zfz"
+    echo "$ brew install git zsh git-lfs starship fzf gh"
     echo "$ brews cask install slate"
   else
     echo "$ sudo apt-get update"
