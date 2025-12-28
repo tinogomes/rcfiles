@@ -8,7 +8,7 @@ if git >/dev/null || [ ! -f $(which zsh) ] || starship > /dev/null; then
   echo 'Verify if you have installed Git, Z Shell, and Starship yet.'
 
   if is_osx; then
-    echo "$ brew install git zsh git-lfs starship"
+    echo "$ brew install git zsh git-lfs starship zfz"
     echo "$ brews cask install slate"
   else
     echo "$ sudo apt-get update"
@@ -64,6 +64,12 @@ ln -s $HOME/.rcfiles/files/zshrc $HOME/.zshrc
 
 echo "Write on $HOME/.zshrc_local file your local settings"
 echo "# Write here your local settings" >> $HOME/.zshrc_local
+
+echo "Write on $HOME/.zshrc_path file your local paths"
+echo "# Write here your local paths" >> $HOME/.zshrc_path
+
+echo "Write on $HOME/.zshrc_alias file your local aliass"
+echo "# Write here your local aliases" >> $HOME/.zshrc_alias
 
 echo "Apply zsh as your default shell 'chsh -s $(which zsh)'"
 echo "and reset your terminal, typing 'reset'"
