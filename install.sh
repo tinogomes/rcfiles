@@ -23,8 +23,9 @@ fi
 cd $HOME
 
 if [ ! -d $HOME/.oh-my-zsh ]; then
-  echo "Getting OM MY ZSH from tinogomes' fork repository"
-  git clone git@github.com:tinogomes/ohmyzsh.git .oh-my-zsh || exit 1
+  echo "Getting OM MY ZSH"
+  git clone git@github.com:ohmyzsh/ohmyzsh.git .oh-my-zsh || exit 1
+  echo "Backup .oh-my-zsh/custom"
   mv .oh-my-zsh/custom{,-original}
   echo "Getting My OH-MY-ZSH custom plugin and theme"
   git clone git@github.com:tinogomes/oh-my-zsh-custom.git .oh-my-zsh/custom || exit 1
