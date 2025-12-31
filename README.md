@@ -3,7 +3,7 @@
 ## Requirements
 
 * Z Shell - http://www.zsh.org/
-* Oh my zsh - https://github.com/tinogomes/ohmyzsh (a fork from https://github.com/ohmyzsh/ohmyzsh)
+* Oh my zsh - https://github.com/ohmyzsh/ohmyzsh
 * DiffMerge - https://sourcegear.com/diffmerge/
 * Starship - https://starship.rs/
 * TMux - https://github.com/tmux/tmux
