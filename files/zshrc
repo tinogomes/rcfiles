@@ -80,7 +80,7 @@ DISABLE_AUTO_UPDATE="true"
 # Custom plugins may be added to $ZSH_CUSTOM/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(alias-tips asdf brew bundler docker docker-compose gem git httpie macos python rails ruby tinogomes virtualenv zsh-syntax-highlighting)
+plugins=(asdf brew bundler docker docker-compose gem git httpie macos python rails ruby tinogomes virtualenv)
 
 source $ZSH/oh-my-zsh.sh
 
